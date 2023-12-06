@@ -3,7 +3,16 @@ export default {
   purge: ['./index.html', './src/**/*.{vue,js}'],
   content: [],
   theme: {
-    extend: {},
+    // colors: {
+    //   primary: "#161616"
+    // },
+    extend: {
+      fontFamily: {
+        menu: [ 'Oswald', 'sans-serif' ],
+        branding: ['Horizon', 'sans-serif'],
+        text: ['Roboto', 'sans-serif']
+      },
+    },
   },
   plugins: [],
 }
