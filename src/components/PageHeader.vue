@@ -26,22 +26,10 @@
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 font-menu uppercase font-bold"
                     id="navbar-sticky">
                     <ul
-                        class="holz-app-nav-ul flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
-                        <li>
-                            <RouterLink to="/" class="holz-app-nav-button block py-2 px-3 rounded md:p-0">{{
-                                headerContent.menuhome }}</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/gallery" class="holz-app-nav-button block py-2 px-3 rounded md:p-0">{{
-                                headerContent.menugallery }}</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/benefits" class="holz-app-nav-button block py-2 px-3 rounded md:p-0">{{
-                                headerContent.menubenefits }}</RouterLink>
-                        </li>
-                        <li>
-                            <RouterLink to="/contacts" class="holz-app-nav-button block py-2 px-3 rounded md:p-0">{{
-                                headerContent.menucontacts }}</RouterLink>
+                        class="holz-app-nav-ul flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
+                        <li v-for="item in headerContent.menu" :key="item.name">
+                            <RouterLink :to="item.link" class="holz-app-nav-button  block py-2 px-3 rounded md:p-0" active-class="holz-app-nav-button-arrow">{{
+                                item.name }}</RouterLink>
                         </li>
                     </ul>
                 </div>

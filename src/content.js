@@ -3,10 +3,13 @@ import logo from '@/assets/images/holzringe_transparent_512_cutbw.png';
 export const headerContent = {
     logolink: logo,
     srmenutip: "Открыть меню",
-    menuhome: "Главная",
-    menugallery: "Галлерея",
-    menubenefits: "Преимущества",
-    menucontacts: "Контакты"
+    menu: {
+        menuhome: {name: "Главная", link: "/"},
+        menugallery: {name: "Галлерея", link: "/gallery"},
+        menubenefits: {name: "Преимущества", link: "/benefits"},
+        menucontacts: {name: "Контакты", link: "/contacts"}
+    },
+
 }
 
 export const footerContent = {
