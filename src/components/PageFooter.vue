@@ -1,60 +1,35 @@
 <template>
-    <footer class="w-full dark:bg-gray-800 bg-white shadow">
+    <footer class="holz-app-footer w-full shadow">
         <div class="sm:flex sm:items-center sm:justify-between p-3 mx-auto antialiased w-full max-w-screen-2xl">
-            <p class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0">
-                {{ footerContent.year }} &copy; <a :href="footerContent.holz" class="hover:underline"
+            <p class="holz-app-footer-text mb-4 text-sm text-center sm:mb-0">
+                {{ footerContent.year }} &copy; <a :href="footerContent.holz" class="holz-app-footer-link"
                     target="_blank">Holzringe.ru</a>. Разработка и дизайн от <a :href="footerContent.creator"
-                    class="hover:underline" target="_blank">Alex Mladich</a>.
+                    class="holz-app-footer-link font-semibold" target="_blank">Alex Mladich</a>.
             </p>
             <div class="flex justify-center items-center space-x-1">
-                <a :href="footerContent.tel" data-tooltip-target="tooltip-phone"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <PhoneIcon color="#fff" />
-                    <span class="sr-only">{{ footerContent.telsr }}</span>
+                <a :href="contactOptions.phone"
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    <PhoneIcon color="#f97316" />
                 </a>
-                <div id="tooltip-phone" role="tooltip"
-                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-                    {{ footerContent.teltip }}
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                <a :href="footerContent.wa" data-tooltip-target="tooltip-whatsapp"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <WhatsappIcon color="#fff" />
-                    <span class="sr-only">{{ footerContent.wasr }}</span>
+                <a :href="contactOptions.whatsapp"
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    <WhatsappIcon color="#25d366" />
                 </a>
-                <div id="tooltip-whatsapp" role="tooltip"
-                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-                    {{ footerContent.watip }}
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                <a :href="footerContent.vb" data-tooltip-target="tooltip-viber"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <ViberIcon color="#fff" />
-                    <span class="sr-only">{{ footerContent.vbsr }}</span>
+                <a :href="contactOptions.viber"
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    <ViberIcon color="#7d3daf" />
                 </a>
-                <div id="tooltip-viber" role="tooltip"
-                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-                    {{ footerContent.vbtip }}
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
-                <a :href="footerContent.tg" data-tooltip-target="tooltip-telegram"
-                    class="inline-flex justify-center p-2 text-gray-500 rounded-lg cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
-                    <TelegramIcon color="#fff" />
-                    <span class="sr-only">{{ footerContent.tgsr }}</span>
+                <a :href="contactOptions.telegram"
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    <TelegramIcon color="#ffffff" />
                 </a>
-                <div id="tooltip-telegram" role="tooltip"
-                    class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
-                    {{ footerContent.tgtip }}
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
             </div>
         </div>
-
     </footer>
 </template>
 
 <script setup>
-import { footerContent } from '@/content';
+import { footerContent, contactOptions } from '@/content';
 import WhatsappIcon from '../components/icons/WhatsappIcon.vue'
 import PhoneIcon from '../components/icons/PhoneIcon.vue'
 import ViberIcon from '../components/icons/ViberIcon.vue'

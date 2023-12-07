@@ -29,6 +29,22 @@
     }
     
     /* PageFooter.vue */
+    .holz-app-footer {
+        /* the whole footer style */
+        @apply bg-primary-0 dark:bg-primary-1000;
+    }
+    .holz-app-footer-text {
+        /* copyright and creator */
+        @apply text-primary-1000 dark:text-primary-0;
+    }
+    .holz-app-footer-link {
+        /* copyright's and creator's links */
+        @apply hover:underline hover:text-orange-500;
+    }
+    .holz-app-footer-icon-link {
+        /* hover colors for icons */
+        @apply dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-500;
+    }
 }
 
 @layer utilities {

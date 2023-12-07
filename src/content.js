@@ -16,16 +16,11 @@ export const footerContent = {
     holz: "https://holzringe.ru/",
     creator: "https://mladich.com/",
     year: new Date().getFullYear(),
-    tel: "#",
-    teltip: "Телефон",
-    telsr: "Позвонить на мобильный",
-    wa: "#",
-    watip: "Whatsapp",
-    wasr: "Связаться в whatsapp",
-    vb: "#",
-    vbtip: "Viber",
-    vbsr: "Связаться в viber",
-    tg: "#",
-    tgtip: "Telegram",
-    tgsr: "Связаться в telegram",
+}
+
+export const contactOptions = {
+    phone: "#",
+    whatsapp: "#",
+    viber: "#",
+    telegram: "#",
 }
