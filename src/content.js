@@ -1,5 +1,7 @@
+import logo from '@/assets/images/holzringe_transparent_512_cutbw.png';
+
 export const headerContent = {
-    logolink: "#",
+    logolink: logo,
     srmenutip: "Открыть меню",
     menuhome: "Главная",
     menugallery: "Галлерея",

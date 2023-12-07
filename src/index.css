@@ -3,3 +3,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    /* ONLY COLORS (elements, borders, text) AND ANIMATIONS HERE */
+    /* PageHeader.vue */
+    .holz-app-nav {
+        /* the whole top nav bar */
+        @apply bg-white dark:bg-gray-900
+        border-b border-gray-200 dark:border-gray-600;
+    }
+    .holz-app-nav-toggle {
+        /* theme switcher */
+        @apply bg-gray-200 dark:bg-gray-700
+        peer-checked:after:border-white after:bg-white after:border-gray-300
+        dark:border-gray-600 peer-checked:bg-orange-500;
+    }
+    .holz-mobile-nav {
+        /* the whole mobile menu */
+        @apply text-gray-500 hover:bg-gray-100
+        dark:text-gray-400 dark:hover:bg-gray-700;
+    }
+    .holz-app-nav-ul {
+        /* ul element that contains menu links */
+        @apply border-gray-100 bg-gray-50 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 border md:border-0;
+    }
+    .holz-app-nav-button {
+        /* ul's links */
+        @apply text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700
+        md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700;
+    }
+    
+    /* PageFooter.vue */
+}
