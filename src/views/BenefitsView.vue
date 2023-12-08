@@ -1,5 +1,5 @@
 <template> 
-    <div>
+    <main>
         Benefits
-    </div>
+    </main>
 </template>

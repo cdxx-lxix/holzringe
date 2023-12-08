@@ -3,7 +3,7 @@
         <nav class="holz-app-nav w-full z-20">
             <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <div class="flex items-center space-x-3">
-                    <img :src="headerContent.logolink" class="h-10" alt="Holzringe Logo">
+                    <img :src="headerContent.logolink" class="h-10 hover:animate-spin hover:delay-150  hover:ease-in-out" alt="Holzringe Logo">
                 </div>
                 <div class="flex md:order-2 space-x-3 md:space-x-0">
                     <label class="relative inline-flex items-center me-5 cursor-pointer">

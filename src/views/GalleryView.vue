@@ -1,5 +1,5 @@
 <template> 
-    <div>
+    <main class="h-full">
         Gallery
-    </div>
+    </main>
 </template>

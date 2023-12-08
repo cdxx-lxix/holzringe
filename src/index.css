@@ -1,79 +1,117 @@
 /* ./src/index.css */
-@import url("/src/assets/fonts/fonts.css");
+@import url('/src/assets/fonts/fonts.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
-    /* ONLY COLORS (elements, borders, text) AND ANIMATIONS HERE */
-    /* PageHeader.vue */
-    .holz-app-nav {
-        /* the whole top nav bar */
-        @apply bg-primary-0 dark:bg-primary-1000
-        border-b border-gray-200 dark:border-gray-600;
-    }
-    .holz-app-nav-toggle {
-        /* theme switcher */
-        @apply bg-primary-1000 dark:bg-gray-700
-        peer-checked:after:border-orange-400 after:bg-orange-500 after:border-orange-400
+  /* ONLY COLORS (elements, borders, text) AND ANIMATIONS HERE */
+  /* PageHeader.vue */
+  .holz-app-nav {
+    /* the whole top nav bar */
+    @apply bg-primary-0 dark:bg-primary-1000
+        border-b border-gray-900 dark:border-gray-600;
+  }
+  .holz-app-nav-toggle {
+    /* theme switcher */
+    @apply bg-primary-1000 dark:bg-gray-700
+        peer-checked:after:border-primary-1000 peer-checked:after:bg-slate-700
+        after:bg-teal-400 after:border-primary-0
         dark:border-gray-600 peer-checked:bg-primary-0;
-    }
-    .holz-mobile-nav {
-        /* the whole mobile menu */
-        @apply text-gray-500 hover:bg-gray-100
+  }
+  .holz-mobile-nav {
+    /* the whole mobile menu */
+    @apply text-gray-500 hover:bg-gray-100
         dark:text-gray-400 dark:hover:bg-gray-700;
-    }
-    .holz-app-nav-button {
-        /* router's ul's links */
-        @apply text-primary-1000 dark:text-primary-0 dark:hover:text-orange-600 hover:text-orange-600;
-    }
-    
-    /* PageFooter.vue */
-    .holz-app-footer {
-        /* the whole footer style */
-        @apply bg-primary-0 dark:bg-primary-1000;
-    }
-    .holz-app-footer-text {
-        /* copyright and creator */
-        @apply text-primary-1000 dark:text-primary-0;
-    }
-    .holz-app-footer-link {
-        /* copyright's and creator's links */
-        @apply hover:underline hover:text-orange-500;
-    }
-    .holz-app-footer-icon-link {
-        /* hover colors for icons */
-        @apply dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-500;
-    }
+  }
+  .holz-app-nav-button {
+    /* router's ul's links */
+    @apply text-primary-1000 dark:text-primary-0 dark:hover:text-orange-600 hover:text-orange-600;
+  }
+
+  /* PageFooter.vue */
+  .holz-app-footer {
+    /* the whole footer style */
+    @apply bg-primary-0 dark:bg-primary-1000 border-t border-gray-900;
+  }
+  .holz-app-footer-text {
+    /* copyright and creator */
+    @apply text-primary-1000 dark:text-primary-0;
+  }
+  .holz-app-footer-link {
+    /* copyright's and creator's links */
+    @apply hover:underline hover:text-orange-500;
+  }
+  .holz-app-footer-icon-link {
+    /* hover colors for icons */
+    @apply dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-500;
+  }
+
+  /* App's body */
+  .holz-app-home-body {
+    @apply bg-primary-100 dark:bg-primary-200;
+  }
 }
 
 @layer utilities {
-    .holz-app-nav-button-arrow {
-        position: relative;
-    }
-    .holz-app-nav-button-arrow::before,
-    .holz-app-nav-button-arrow::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: #f97316; /* tailwind orange-500 */
-      }
-    /* upper */
-    .holz-app-nav-button-arrow::after {
-        bottom: 0;
-        transform: skewX(-45deg);
-    }
-    /* lower */
-    .holz-app-nav-button-arrow::before {
-        bottom: 1.5px;
-        transform: skewX(45deg);
-    }
-    .slide-enter-active, .slide-leave-active {
-        transition: all .3s ease;
-      }
-    .slide-enter, .slide-leave-to {
-        transform: translateX(100%);
-    }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    height: 100%;
+  }
+  .holz-main-img {
+    height: 85svh;
+  }
+  .holz-app-nav-button-arrow {
+    position: relative;
+  }
+  .holz-app-nav-button-arrow::before,
+  .holz-app-nav-button-arrow::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    @apply dark:bg-slate-700 bg-teal-400;
+  }
+  /* upper */
+  .holz-app-nav-button-arrow::after {
+    top: 0;
+    transform: skewX(-45deg);
+  }
+  /* lower */
+  .holz-app-nav-button-arrow::before {
+    bottom: 0;
+    transform: skewX(45deg);
+  }
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: all 0.3s ease;
+  }
+  .slide-enter,
+  .slide-leave-to {
+    transform: translateX(100%);
+  }
+  .holz-corner-borders {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    --b: 5px;   /* thickness of the border */
+    --c: #161616;   /* color of the border */
+    --w: 20px;  /* width of border */
+    border: var(--b) solid #0000; /* space for the border */
+    --_g: #0000 90deg,var(--c) 0;
+    --_p: var(--w) var(--w) border-box no-repeat;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+  }
 }

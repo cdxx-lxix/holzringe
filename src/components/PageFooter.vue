@@ -3,7 +3,7 @@
         <div class="sm:flex sm:items-center sm:justify-between p-3 mx-auto antialiased w-full max-w-screen-2xl">
             <p class="holz-app-footer-text mb-4 text-sm text-center sm:mb-0">
                 {{ footerContent.year }} &copy; <a :href="footerContent.holz" class="holz-app-footer-link"
-                    target="_blank">Holzringe.ru</a>. Разработка и дизайн от <a :href="footerContent.creator"
+                    target="_blank">Holzringe.ru</a>, Москва. Разработка и дизайн от <a :href="footerContent.creator"
                     class="holz-app-footer-link font-semibold" target="_blank">Alex Mladich</a>.
             </p>
             <div class="flex justify-center items-center space-x-1">
