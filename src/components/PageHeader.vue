@@ -6,7 +6,7 @@
                     <img :src="headerContent.logolink" class="h-10 hover:animate-spin hover:delay-150  hover:ease-in-out" alt="Holzringe Logo">
                 </div>
                 <div class="flex md:order-2 space-x-3 md:space-x-0">
-                    <label class="relative inline-flex items-center me-5 cursor-pointer">
+                    <label class="relative inline-flex items-center cursor-pointer">
                         <input type="checkbox" value="" class="sr-only peer" :checked="themeButton" @click="themeSwitcher">
                         <div
                             class="holz-app-nav-toggle w-11 h-6 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:border after:rounded-full after:h-5 after:w-5 after:transition-all">
