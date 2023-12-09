@@ -57,6 +57,7 @@
   html,
   body {
     height: 100%;
+    max-height: 100%;
   }
   body {
     display: flex;
@@ -64,6 +65,7 @@
   }
   main {
     height: 100%;
+    max-height: 100%;
   }
   .holz-main-img {
     height: 85svh;
@@ -113,5 +115,11 @@
       conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
       conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
       conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+  }
+  .holz-gal-image {
+    @apply mr-2;
+  }
+  .holz-gal-image:last-child {
+    @apply mr-0;
   }
 }
