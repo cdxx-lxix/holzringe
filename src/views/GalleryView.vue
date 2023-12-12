@@ -1,6 +1,6 @@
 <template>
     <main class="font-text p-3 mx-auto antialiased w-full max-w-screen-2xl block">
-        <div class="mx-auto my-2 max-h-full h-[84svh]">
+        <div class="mx-auto my-2 max-h-full h-[84svh] dark:bg-primary-1000 bg-primary-0">
             <div class="h-5/6 w-full">
                 <img :src="currentImage.link" :alt="currentImage.alt" class="object-cover h-full w-full">
                 <div class="relative bg-trprimary-1000 text-white bottom-16 w-full px-3 flex items-center">
@@ -11,10 +11,10 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full h-1/6 max-h-full min-h-max flex flex-row whitespace-nowrap overflow-x-scroll mt-2 mx-0">
+            <div class="w-full h-1/6 max-h-full min-h-max flex flex-row whitespace-nowrap overflow-x-scroll holz-scrollbar mt-2 mx-0">
                 <img class="holz-gal-image mb-2 hover:opacity-50 hover:cursor-pointer" v-for="image in images"
                     :key="image.alt" :src="image.link" :alt="image.alt" @click="imageChanger(image)"
-                    :class="image.isDisplayed ? 'holz-corner-borders p-2 filter sepia blur-xs contrast-200' : ''">
+                    :class="image.isDisplayed ? 'holz-corner-borders dark:holz-corner-borders-light p-2 filter sepia blur-xs contrast-200' : ''">
             </div>
         </div>
     </main>
