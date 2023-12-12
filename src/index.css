@@ -44,7 +44,7 @@
   }
   .holz-app-footer-icon-link {
     /* hover colors for icons */
-    @apply dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600 text-gray-500;
+    @apply dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-900 dark:hover:bg-gray-600 text-gray-500;
   }
 
   /* App's body */
@@ -63,26 +63,48 @@
   .holz-benefits-card p {
     @apply text-gray-700 dark:text-gray-400;
   }
+
+  /* ContactsView */
+  .holz-contacts-card {
+    @apply bg-primary-0 dark:bg-primary-1000 border border-gray-900 dark:border-primary-0;
+  }
+  .holz-contacts-form {
+    @apply text-primary-1000 dark:text-primary-0;
+  }
+  .holz-contacts-form input,
+  .holz-contacts-form select,
+  .holz-contacts-form textarea {
+    @apply outline-none bg-gray-50 border border-gray-300 text-primary-1000 focus:border-teal-600 
+    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 focus:dark:border-amber-500 dark:text-primary-0;
+  }
+  .holz-contacts-form button {
+    @apply dark:bg-primary-0 bg-primary-1000 text-primary-0 dark:text-primary-1000 hover:bg-teal-600 outline-none dark:hover:bg-amber-500;
+  }
+  .holz-contacts-form input[type=file]::file-selector-button {
+    @apply dark:bg-primary-0 dark:text-primary-1000 border dark:hover:bg-amber-500
+    bg-primary-1000 text-primary-0 border-primary-1000 hover:bg-teal-600
+    p-3 rounded-l-md mr-2 cursor-pointer font-semibold;
+  }
+  .holz-contacts-about h5 {
+    @apply text-primary-1000 dark:text-primary-0;
+  }
+  .holz-contacts-about p {
+    @apply text-gray-700 dark:text-gray-400;
+  }
 }
 
 @layer utilities {
   html,
-  body {
-    height: 100%;
-    max-height: 100%;
-    margin: 0;
+  body,
+  main {
+    @apply lg:h-full lg:max-h-full m-0;
   }
   body {
-    display: flex;
-    flex-direction: column;
+    @apply flex flex-col;
     background-image: url("@/assets/images/wooden_pattern.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
-  main {
-    height: 100%;
-    max-height: 100%;
   }
   .holz-main-img {
     height: 85svh;

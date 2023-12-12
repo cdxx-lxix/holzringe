@@ -9,19 +9,19 @@
             <div class="flex justify-center items-center space-x-1">
                 <a :href="contactOptions.phone"
                     class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
-                    <PhoneIcon color="#f97316" />
+                    <PhoneIcon class="w-4 h-4" color="#f97316" />
                 </a>
                 <a :href="contactOptions.whatsapp"
                     class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
-                    <WhatsappIcon color="#25d366" />
+                    <WhatsappIcon class="w-4 h-4" color="#25d366" />
                 </a>
                 <a :href="contactOptions.viber"
                     class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
-                    <ViberIcon color="#7d3daf" />
+                    <ViberIcon class="w-4 h-4" color="#7d3daf" />
                 </a>
                 <a :href="contactOptions.telegram"
                     class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
-                    <TelegramIcon color="#ffffff" />
+                    <TelegramIcon class="w-4 h-4" color="#ffffff" />
                 </a>
             </div>
         </div>
