@@ -51,6 +51,18 @@
   .holz-app-home-body {
     @apply bg-primary-100 dark:bg-primary-500;
   }
+
+  /* BenefitsView */
+  .holz-benefits-card {
+    @apply bg-primary-0 dark:bg-primary-1000 hover:dark:bg-trprimary-950 hover:bg-trprimary-900
+    border border-gray-900 dark:border-primary-0;
+  }
+  .holz-benefits-card h5 {
+    @apply text-gray-900 dark:text-white;
+  }
+  .holz-benefits-card p {
+    @apply text-gray-700 dark:text-gray-400;
+  }
 }
 
 @layer utilities {
@@ -63,6 +75,10 @@
   body {
     display: flex;
     flex-direction: column;
+    background-image: url("@/assets/images/wooden_pattern.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   main {
     height: 100%;
