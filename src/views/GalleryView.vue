@@ -1,9 +1,9 @@
 <template>
     <main class="font-text p-3 mx-auto antialiased w-full max-w-screen-2xl block">
-        <div class="mx-auto my-2 max-h-full h-[84svh] dark:bg-primary-1000 bg-primary-0">
+        <div class="mx-auto my-2 max-h-full h-[84svh] dark:bg-primary-1000 bg-primary-0 border border-gray-900 dark:border-primary-0">
             <div class="h-5/6 w-full">
                 <img :src="currentImage.link" :alt="currentImage.alt" class="object-cover h-full w-full">
-                <div class="relative bg-trprimary-1000 text-white bottom-16 w-full px-3 flex items-center">
+                <div class="relative bg-trprimary-1000 text-white w-full bo px-3 flex items-center" @click="showReview" :class="isReviewVisible ? 'bottom-full h-full' : 'bottom-16'">
                     <img :src="currentImage.link" alt="Reviewer" class="rounded-full w-16 h-16 mr-4 p-1">
                     <div class="flex flex-col truncate">
                         <h6 class="font-semibold">{{ currentImage.reviewer }}</h6>
@@ -34,6 +34,10 @@ const images = {
     8: { link: 'https://www.desktopbackground.org/download/1440x900/2011/01/09/139423_glacier-cave-wallpapers-wallpaper_1920x1080_h.jpg', alt: 'cave', reviewer: 'Andrey9', review: 'Wsjo zbs', isDisplayed: false },
     9: { link: 'https://www.desktopbackground.org/download/1440x900/2012/04/15/374779_adventure-journal-wallpapers-wednesday-cave-mexico_1680x1050_h.jpg', alt: 'cave', reviewer: 'Andrey10', review: 'Wsjo zbs', isDisplayed: false },
     10: { link: 'https://10wallpaper.com/wallpaper/1440x900/1401/cave_in_valley-Nature_HD_Wallpaper_1440x900.jpg', alt: 'cave', reviewer: 'Andrey11', review: 'Wsjo zbs', isDisplayed: false }
+}
+const isReviewVisible = ref(false)
+const showReview = () => {
+    return isReviewVisible.value = !isReviewVisible.value
 }
 const currentImage = ref(images[0])
 const imageChanger = (clickedImage) => {
