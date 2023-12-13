@@ -54,14 +54,20 @@
 
   /* BenefitsView */
   .holz-benefits-card {
-    @apply bg-primary-0 dark:bg-primary-1000 hover:dark:bg-trprimary-950 hover:bg-trprimary-900
-    border border-gray-900 dark:border-primary-0;
+    @apply bg-primary-0 dark:bg-primary-1000 border border-gray-900 dark:border-primary-0;
+  }
+  .holz-benefits-card h1 {
+    @apply text-primary-1000 dark:text-primary-0;
   }
   .holz-benefits-card h5 {
-    @apply text-gray-900 dark:text-white;
+    @apply text-primary-1000 dark:text-primary-0;
   }
   .holz-benefits-card p {
     @apply text-gray-700 dark:text-gray-400;
+  }
+  .holz-benefits-hr {
+    @apply border border-teal-600 bg-teal-600
+    dark:border-amber-500 dark:bg-amber-500;
   }
 
   /* ContactsView */
@@ -91,6 +97,7 @@
   .holz-contacts-about p {
     @apply text-gray-700 dark:text-gray-400;
   }
+
 }
 
 @layer utilities {

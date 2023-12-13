@@ -1,5 +1,7 @@
 import logo from '@/assets/images/holzringe_transparent_512_cutbw.png';
 
+export const projectName = "HOLZRINGE";
+
 export const headerContent = {
     logolink: logo,
     srmenutip: "Открыть меню",
@@ -9,7 +11,6 @@ export const headerContent = {
         menubenefits: {name: "Преимущества", link: "/benefits"},
         menucontacts: {name: "Контакты", link: "/contacts"}
     },
-
 }
 
 export const footerContent = {
@@ -48,4 +49,8 @@ export const contactsPage = {
         filePlaceholder: "Дополнительные детали по заказу, например фото.",
         sendButton: "Отправить"
     }
+}
+
+export const benefitsPage = {
+    subheaderP: "Что Вы получите выбрав нас:"
 }

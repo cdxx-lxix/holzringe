@@ -1,14 +1,51 @@
 <template>
-    <main class="mx-auto antialiased w-full max-w-screen-2xl grid items-center grid-cols-1 gap-3 px-4 md:grid-cols-2 my-2">
-        <div class="holz-benefits-card flex flex-row items-center shadow" v-for="i in 6" :key="i">
-            <img class="object-cover w-full h-full"
-                src="https://d36tnp772eyphs.cloudfront.net/blogs/1/2018/05/shutterstock_713944252.jpg" alt="">
-            <div class="flex flex-col justify-between p-1 mx-2 leading-normal">
-                <h5 class="mb-1 text-xl font-bold tracking-tight">Noteworthy
-                    technology acquisitions 2021</h5>
-                <p class="mb-1 font-normal">Here are the biggest enterprise
-                    technology acquisitions of 2021 so far, in reverse chronological order.</p>
+    <main class="m-auto antialiased w-full max-w-screen-2xl p-3 flex flex-col justify-center">
+        <div class="w-full flex flex-col items-center holz-benefits-card p-4">
+            <h1 class="font-branding text-6xl p-2 text-center w-1/2">{{ projectName }}</h1>
+            <hr class="holz-benefits-hr w-1/4 mx-auto h-1">
+            <h5 class="font-semibold">{{ benefitsPage.subheaderP }}</h5>
+        </div>
+        
+        <div class="grid items-center grid-cols-5 gap-3 mx-auto h-4/5 mt-2">
+            <div class="flex flex-col h-full holz-benefits-card">
+                <div class="h-1/2 p-3">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight">H5</h5>
+                    <p class="font-normal">paragraph</p>
+                </div>
+                <img class="h-1/2" src="https://yt3.googleusercontent.com/ytc/APkrFKa0i9WfTf3SoA1xiPyGnMpPmugBkLaC09Izf31t=s900-c-k-c0x00ffffff-no-rj" alt="">
+            </div>
+            <div class="flex flex-col h-full holz-benefits-card">
+                <div class="h-1/2 order-2 p-3">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight">H5</h5>
+                    <p class="font-normal">paragraph</p>
+                </div>
+                <img class="h-1/2 order-1" src="https://yt3.googleusercontent.com/ytc/APkrFKa0i9WfTf3SoA1xiPyGnMpPmugBkLaC09Izf31t=s900-c-k-c0x00ffffff-no-rj" alt="">
+            </div>
+            <div class="flex flex-col h-full holz-benefits-card">
+                <div class="h-1/2 p-3">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight">H5</h5>
+                    <p class="font-normal">paragraph</p>
+                </div>
+                <img class="h-1/2" src="https://yt3.googleusercontent.com/ytc/APkrFKa0i9WfTf3SoA1xiPyGnMpPmugBkLaC09Izf31t=s900-c-k-c0x00ffffff-no-rj" alt="">
+            </div>
+            <div class="flex flex-col h-full holz-benefits-card">
+                <div class="h-1/2 order-2 p-3">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight">H5</h5>
+                    <p class="font-normal">paragraph</p>
+                </div>
+                <img class="h-1/2 order-1" src="https://yt3.googleusercontent.com/ytc/APkrFKa0i9WfTf3SoA1xiPyGnMpPmugBkLaC09Izf31t=s900-c-k-c0x00ffffff-no-rj" alt="">
+            </div>
+            <div class="flex flex-col h-full holz-benefits-card">
+                <div class="h-1/2 p-3">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight">H5</h5>
+                    <p class="font-normal">paragraph</p>
+                </div>
+                <img class="h-1/2" src="https://yt3.googleusercontent.com/ytc/APkrFKa0i9WfTf3SoA1xiPyGnMpPmugBkLaC09Izf31t=s900-c-k-c0x00ffffff-no-rj" alt="">
             </div>
         </div>
     </main>
 </template>
+
+<script setup>
+import { projectName, benefitsPage } from '@/content';
+</script>
