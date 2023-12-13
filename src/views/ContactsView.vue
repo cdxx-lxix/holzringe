@@ -38,40 +38,44 @@
                 </a>
             </div>
             <div class="holz-contacts-card flex-grow shadow p-4">
-                <form class="holz-contacts-form flex flex-col h-full">
+                <!-- REPLACE EMAIL WITH THE ACTUAL ONE AFTER THE TEST! -->
+                <form class="holz-contacts-form flex flex-col h-full" target="_blank" method="POST" action="https://formsubmit.co/896e9e5f6bd5c26cab337173d20ecb22" enctype="multipart/form-data">
                     <div class="mb-5">
                         <label for="email" class="block mb-2 text-sm font-medium">{{ contactsPage.form.mailLabel }}</label>
-                        <input type="email" id="email"
+                        <input type="email" id="email" name="почта"
                             class="shadow-sm text-sm rounded-lg block w-full p-2.5 dark:shadow-sm-light"
                             placeholder="vyatich@yandex.ru" required>
                     </div>
                     <div class="mb-5">
                         <label for="name" class="block mb-2 text-sm font-medium">{{ contactsPage.form.nameLabel }}</label>
-                        <input type="text" id="name"
+                        <input type="text" id="name" name="имя" v-model="senderName"
                             class="shadow-sm text-sm rounded-lg block w-full p-2.5 dark:shadow-sm-light"
                             placeholder="Добрыня" required>
                     </div>
                     <div class="mb-5">
                         <label for="countries" class="block mb-2 text-sm font-medium">{{ contactsPage.form.locationLabel
                         }}</label>
-                        <select id="countries" class="text-sm rounded-lg block w-full p-2.5">
+                        <select id="countries" name="регион" class="text-sm rounded-lg block w-full p-2.5">
                             <option v-for="option in contactsPage.form.locations" :key="option">{{ option }}</option>
                         </select>
                     </div>
                     <div class="mb-5">
                         <label for="message" class="block mb-2 text-sm font-medium">{{ contactsPage.form.messageLabel
                         }}</label>
-                        <textarea id="message" rows="9" class="block p-2.5 w-full text-sm rounded-lg dark:shadow-sm-light"
+                        <textarea id="message" name="сообщение" rows="9" class="block p-2.5 w-full text-sm rounded-lg dark:shadow-sm-light"
                             :placeholder="contactsPage.form.messagePlaceholder"></textarea>
                     </div>
                     <div class="mb-5">
                         <label class="block mb-2 text-sm font-medium" for="additional-files">{{ contactsPage.form.fileLabel
                         }}</label>
                         <input class="shadow-sm text-sm rounded-lg block w-full  dark:shadow-sm-light"
-                            aria-describedby="additional-files_help" id="additional-files" type="file">
+                            aria-describedby="additional-files_help" id="additional-files" name="закрепленный файл" type="file" :accept="acceptedFilyTypes">
                         <div class="mt-1 text-sm opacity-50" id="additional-files_help">{{
                             contactsPage.form.filePlaceholder }}</div>
                     </div>
+                    <input type="hidden" name="_subject" :value="`Новое сообщение на Holzringe от ${senderName}`">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_template" value="table">
                     <button type="submit" class="font-medium rounded-lg text-sm px-5 py-2.5 text-center">{{
                         contactsPage.form.sendButton }}</button>
                 </form>
@@ -81,9 +85,14 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { contactOptions, contactsPage } from '@/content';
 import WhatsappIcon from '../components/icons/WhatsappIcon.vue'
 import PhoneIcon from '../components/icons/PhoneIcon.vue'
 import ViberIcon from '../components/icons/ViberIcon.vue'
 import TelegramIcon from '../components/icons/TelegramIcon.vue'
+
+// Only these guys are accepted by contact form
+const acceptedFilyTypes = "image/*, .txt, .rtf, .doc, .docx, .xls, .xlsx, .pdf, .ppt, .pttx"
+const senderName = ref('') // Used for email header so that emails won't blend together with the same topic
 </script>

@@ -40,7 +40,7 @@
   }
   .holz-app-footer-link {
     /* copyright's and creator's links */
-    @apply hover:underline hover:text-orange-500;
+    @apply hover:underline hover:text-teal-600 dark:hover:text-amber-500;
   }
   .holz-app-footer-icon-link {
     /* hover colors for icons */
