@@ -1,20 +1,51 @@
 <template>
-    <main class="font-text p-3 mx-auto antialiased w-full max-w-screen-2xl block">
-        <div class="mx-auto my-2 max-h-full h-[84svh] dark:bg-primary-1000 bg-primary-0 border border-gray-900 dark:border-primary-0">
-            <div class="h-5/6 w-full">
-                <img :src="currentImage.link" :alt="currentImage.alt" class="object-cover h-full w-full">
-                <div class="relative bg-trprimary-1000 text-white w-full bo px-3 flex items-center" @click="showReview" :class="isReviewVisible ? 'bottom-full h-full' : 'bottom-16'">
-                    <img :src="currentImage.link" alt="Reviewer" class="rounded-full w-16 h-16 mr-4 p-1">
-                    <div class="flex flex-col truncate">
-                        <h6 class="font-semibold">{{ currentImage.reviewer }}</h6>
-                        <p class="text-base w-11/12">{{ currentImage.review }}</p>
-                    </div>
-                </div>
+    <main
+        class="font-text p-3 mx-auto antialiased w-full max-w-screen-2xl grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-3">
+        <div class="holz-benefits-card flex flex-col items-center col-span-10">
+            <div class="relative text-center p-1 font-normal bg-trprimary-1000 text-white top-0 w-full">
+                <h6>{{ `${currentImageIndex + 1} из
+                            ${galleryPage.images.length} | Как ${isBefore ? galleryPage.beforeTitle : galleryPage.afterTitle} на объекте` }}</h6>
+                <p class="text-sm">Нажмите на фото для просмотра как {{ !isBefore ? galleryPage.beforeTitle : galleryPage.afterTitle }}</p>
             </div>
-            <div class="w-full h-1/6 max-h-full min-h-max flex flex-row whitespace-nowrap overflow-x-scroll holz-scrollbar mt-2 mx-0">
-                <img class="holz-gal-image mb-2 hover:opacity-50 hover:cursor-pointer" v-for="image in images"
-                    :key="image.alt" :src="image.link" :alt="image.alt" @click="imageChanger(image)"
-                    :class="image.isDisplayed ? 'holz-corner-borders dark:holz-corner-borders-light p-2 filter sepia blur-xs contrast-200' : ''">
+            <img class="object-cover h-full w-full"
+                :src="isBefore ? galleryPage.images[currentImageIndex].before : galleryPage.images[currentImageIndex].after"
+                :alt="galleryPage.images[currentImageIndex].alt"
+                :style="[isBW ? 'filter: grayscale(100%);' : '', isInverted ? 'filter: invert(1);' : '']"
+                @click="beforeAfter">
+        </div>
+        <div class="flex flex-col items-center col-span-2">
+            <div class="flex flex-row justify-between holz-benefits-card w-full h-20 mb-3 p-3">
+                <button class="rounded-full bg-white h-12 w-12 p-2" @click="imageSliderControls('back')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+                    </svg>
+                </button>
+                <button class="rounded-full bg-white h-12 w-12 p-2" @click="bwfilter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M19,19L12,11V19H5L12,11V5H19M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" />
+                    </svg>
+                </button>
+                <button class="rounded-full bg-white h-12 w-12 p-2" @click="invertFilter">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M18,8H6V18H18M20,20H4V6H8.5L12.04,2.5L15.5,6H20M20,4H16L12,0L8,4H4A2,2 0 0,0 2,6V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V6A2,2 0 0,0 20,4Z" />
+                    </svg>
+                </button>
+                <button class="rounded-full bg-white h-12 w-12 p-2" @click="imageSliderControls('forward')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="holz-benefits-card w-full h-1/2 mb-3 p-3">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight">{{ galleryPage.reviewTitle }}</h5>
+                <p class="mb-2 font-semibold underline">{{ galleryPage.images[currentImageIndex].reviewer }}</p>
+                <p class="font-normal">{{ galleryPage.images[currentImageIndex].review }}</p>
+            </div>
+            <div class="holz-benefits-card w-full h-1/2 p-3">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight">{{ galleryPage.commentTitle }}</h5>
+                <p class="font-normal">{{ galleryPage.images[currentImageIndex].comment }}</p>
             </div>
         </div>
     </main>
@@ -22,27 +53,36 @@
 
 <script setup>
 import { ref } from 'vue';
-const images = {
-    0: { link: 'https://1.bp.blogspot.com/-Obtd1tUq1Oo/U6woYy5Uq0I/AAAAAAAAkMo/PxDgOOHyTcQ/s1600/ozadje_psj_6_3.jpg', alt: 'cave', reviewer: 'Andrey1', review: 'Wsjo zbsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', isDisplayed: true },
-    1: { link: 'https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/04/23133412/grotte-son-doong-vietnam.jpg', alt: 'cave', reviewer: 'Andrey2', review: 'Wsjo zbs', isDisplayed: false },
-    2: { link: 'https://bonpic.com/download_img.php?dimg=7157&raz=1440x900', alt: 'cave', reviewer: 'Andrey3', review: 'Wsjo zbs', isDisplayed: false },
-    3: { link: 'https://www.nastol.com.ua/pic/201405/1440x900/nastol.com.ua-98779.jpg', alt: 'cave', reviewer: 'Andrey4', review: 'Wsjo zbs', isDisplayed: false },
-    4: { link: 'https://www.desktopbackground.org/download/1440x900/2012/04/15/374861_cave-nature-landscape-wallpapers-hd_1600x1071_h.jpg', alt: 'cave', reviewer: 'Andrey5', review: 'Wsjo zbs', isDisplayed: false },
-    5: { link: 'https://www.zastavki.com/pictures/1440x900/2017World_Marble_Cathedral_cave_on_the_shores_of_Lake_General_Carrera__Patagonia_Chile_112735_14.jpg', alt: 'cave', reviewer: 'Andrey6', review: 'Wsjo zbs', isDisplayed: false },
-    6: { link: 'https://namonitore.ru/uploads/catalog/nature/meksika_underground_lake_in_a_cavern_1440.webp', alt: 'cave', reviewer: 'Andrey7', review: 'Wsjo zbs', isDisplayed: false },
-    7: { link: 'https://cdn.fishki.net/upload/post/2019/04/21/2954536/21c1416c453b6facac7d26f4dcad3e5c.jpg', alt: 'cave', reviewer: 'Andrey8', review: 'Wsjo zbs', isDisplayed: false },
-    8: { link: 'https://www.desktopbackground.org/download/1440x900/2011/01/09/139423_glacier-cave-wallpapers-wallpaper_1920x1080_h.jpg', alt: 'cave', reviewer: 'Andrey9', review: 'Wsjo zbs', isDisplayed: false },
-    9: { link: 'https://www.desktopbackground.org/download/1440x900/2012/04/15/374779_adventure-journal-wallpapers-wednesday-cave-mexico_1680x1050_h.jpg', alt: 'cave', reviewer: 'Andrey10', review: 'Wsjo zbs', isDisplayed: false },
-    10: { link: 'https://10wallpaper.com/wallpaper/1440x900/1401/cave_in_valley-Nature_HD_Wallpaper_1440x900.jpg', alt: 'cave', reviewer: 'Andrey11', review: 'Wsjo zbs', isDisplayed: false }
+import { galleryPage } from '@/content';
+const currentImageIndex = ref(0)
+const isBefore = ref(true)
+const imageSliderControls = (direction) => {
+    if (direction !== 'back' && (currentImageIndex.value === galleryPage.images.length - 1)) {
+        return currentImageIndex.value = 0;
+    } else if (direction === 'back' && currentImageIndex.value === 0) {
+        return currentImageIndex.value = galleryPage.images.length - 1;
+    } else if (direction === 'forward') {
+        return currentImageIndex.value++;
+    } else {
+        return currentImageIndex.value--;
+    }
 }
-const isReviewVisible = ref(false)
-const showReview = () => {
-    return isReviewVisible.value = !isReviewVisible.value
+const beforeAfter = () => {
+    return isBefore.value = !isBefore.value
 }
-const currentImage = ref(images[0])
-const imageChanger = (clickedImage) => {
-    currentImage.value.isDisplayed = false
-    currentImage.value = clickedImage
-    currentImage.value.isDisplayed = true
+
+const isBW = ref(false)
+const bwfilter = () => {
+    if (isInverted.value) {
+        isInverted.value = false
+    }
+    return isBW.value = !isBW.value
+}
+const isInverted = ref(false)
+const invertFilter = () => {
+    if (isBW.value) {
+        isBW.value = false
+    }
+    return isInverted.value = !isInverted.value
 }
 </script>
