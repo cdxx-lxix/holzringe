@@ -57,7 +57,7 @@ export const benefitsPage = {
 
 export const galleryPage = {
     images: [
-        { after: "", before: 'https://1.bp.blogspot.com/-Obtd1tUq1Oo/U6woYy5Uq0I/AAAAAAAAkMo/PxDgOOHyTcQ/s1600/ozadje_psj_6_3.jpg', alt: 'cave', reviewer: 'Andrey1', review: 'Wsjo zbs', comment: "", },
+        { after: "", before: 'https://1.bp.blogspot.com/-Obtd1tUq1Oo/U6woYy5Uq0I/AAAAAAAAkMo/PxDgOOHyTcQ/s1600/ozadje_psj_6_3.jpg', alt: 'cave', reviewer: 'Andrey1', review: 'Wsjo zbs', comment: "Жопу порвал за этот паркет ёбаный", },
         { after: "", before: 'https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/04/23133412/grotte-son-doong-vietnam.jpg', alt: 'cave', reviewer: 'Andrey2', review: 'Wsjo zbs', comment: "", },
         { after: "", before: 'https://bonpic.com/download_img.php?dimg=7157&raz=1440x900', alt: 'cave', reviewer: 'Andrey3', review: 'Wsjo zbs', comment: "", },
         { after: "", before: 'https://www.nastol.com.ua/pic/201405/1440x900/nastol.com.ua-98779.jpg', alt: 'cave', reviewer: 'Andrey4', review: 'Wsjo zbs', comment: "", },

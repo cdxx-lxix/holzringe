@@ -2,26 +2,26 @@
     <main class="mx-auto antialiased w-full max-w-screen-2xl p-4 my-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
 
         <div class="flex flex-col items-center mr-4 w-full h-full order-3 lg:order-1 sm:order-3 md:order-2">
-            <img class="holz-contacts-card object-cover shadow flex-grow"
+            <img class="holz-card object-cover shadow flex-grow"
                 src="https://i.pinimg.com/originals/3f/ed/45/3fed454b2d45f3603b21e6554d639056.jpg" alt="">
         </div>
 
         <div
             class="flex flex-col sm:flex-col md:grid md:grid-cols-2 md:gap-3 lg:flex lg:flex-col col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-1 items-center mr-4 w-full h-full order-2 sm:order-2 lg:order-2 md:order-3">
             <div
-                class="holz-contacts-card holz-contacts-about flex-grow shadow mb-4 sm:mb-3 md:mb-0 lg:mb-3 p-4 justify-start sm:h-full lg:h-1/2">
+                class="holz-card flex-grow shadow mb-4 sm:mb-3 md:mb-0 lg:mb-3 p-4 justify-start sm:h-full lg:h-1/2">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight">{{ contactsPage.conditionsTitle }}</h5>
                 <p class="mb-2 font-semibold underline">{{ contactsPage.conditionsCalls }}</p>
                 <p class="font-normal">{{ contactsPage.conditions }}</p>
             </div>
-            <div class="holz-contacts-card holz-contacts-about flex-grow shadow p-4 justify-end sm:h-full lg:h-1/2">
+            <div class="holz-card flex-grow shadow p-4 justify-end sm:h-full lg:h-1/2">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight">{{ contactsPage.aboutTitle }}</h5>
                 <p class="font-normal">{{ contactsPage.about }}</p>
             </div>
         </div>
 
         <div class="flex flex-col w-full h-full order-1 lg:order-3">
-            <div class="holz-contacts-card flex flex-row justify-evenly space-x-1 mb-4 shadow py-2">
+            <div class="holz-card flex flex-row justify-evenly space-x-1 mb-4 shadow py-2">
                 <a :href="contactOptions.phone" class="holz-app-footer-icon-link inline-flex p-2 rounded-lg cursor-pointer">
                     <PhoneIcon class="lg:w-10 md:w-8 lg:h-10 md:h-8 w-6 h-6" color="#f97316" />
                 </a>
@@ -37,7 +37,7 @@
                     <TelegramIcon class="lg:w-10 md:w-8 lg:h-10 md:h-8 w-6 h-6" color="#ffffff" />
                 </a>
             </div>
-            <div class="holz-contacts-card flex-grow shadow p-4">
+            <div class="holz-card flex-grow shadow p-4">
                 <!-- REPLACE EMAIL WITH THE ACTUAL ONE AFTER THE TEST! -->
                 <form class="holz-contacts-form flex flex-col h-full" target="_blank" method="POST" action="https://formsubmit.co/896e9e5f6bd5c26cab337173d20ecb22" enctype="multipart/form-data">
                     <div class="mb-5">
