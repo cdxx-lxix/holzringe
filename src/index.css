@@ -111,7 +111,7 @@
   html,
   body,
   main {
-    @apply lg:h-full lg:max-h-full m-0;
+    @apply xl:h-full xl:max-h-full m-0;
   }
   body {
     @apply flex flex-col;
