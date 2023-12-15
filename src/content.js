@@ -1,44 +1,44 @@
 import logo from '@/assets/images/holzringe_transparent_512_cutbw.png'
-import acacia from "@/assets/woodtypes/acacia.webp";
-import alder from "@/assets/woodtypes/alder.webp";
-import ash from "@/assets/woodtypes/ash.webp";
-import bamboo from "@/assets/woodtypes/bamboo.webp";
-import beech from "@/assets/woodtypes/beech.webp";
-import birch from "@/assets/woodtypes/birch.webp";
-import bocote from "@/assets/woodtypes/bocote.webp";
-import bubinga from "@/assets/woodtypes/bubinga.webp";
-import cedar from "@/assets/woodtypes/cedar.webp";
-import cherry from "@/assets/woodtypes/cherry.webp";
-import cocobolo from "@/assets/woodtypes/cocobolo.webp";
-import cypress from "@/assets/woodtypes/cypress.webp";
-import ebony from "@/assets/woodtypes/ebony.webp";
-import fir from "@/assets/woodtypes/fir.webp";
-import goncaloAlves from "@/assets/woodtypes/goncaloalves.webp";
-import granadillo from "@/assets/woodtypes/granadillo.webp";
-import hemlock from "@/assets/woodtypes/hemlock.webp";
-import hickory from "@/assets/woodtypes/hickory.webp";
-import kauri from "@/assets/woodtypes/kauri.webp";
-import larch from "@/assets/woodtypes/larch.webp";
-import lignumVitae from "@/assets/woodtypes/lignumvitae.webp";
-import mahogany from "@/assets/woodtypes/mahogany.webp";
-import mango from "@/assets/woodtypes/mango.webp";
-import maple from "@/assets/woodtypes/maple.webp";
-import merbau from "@/assets/woodtypes/merbau.webp";
-import oak from "@/assets/woodtypes/oak.webp";
-import padauk from "@/assets/woodtypes/padauk.webp";
-import pine from "@/assets/woodtypes/pine.webp";
-import poplar from "@/assets/woodtypes/poplar.webp";
-import purpleheart from "@/assets/woodtypes/purpleheart.webp";
-import redwood from "@/assets/woodtypes/redwood.webp";
-import rosewood from "@/assets/woodtypes/rosewood.webp";
-import sapele from "@/assets/woodtypes/sapele.webp";
-import satinwood from "@/assets/woodtypes/satinwood.webp";
-import spruce from "@/assets/woodtypes/spruce.webp";
-import teak from "@/assets/woodtypes/teak.webp";
-import tulipwood from "@/assets/woodtypes/tulipwood.webp";
-import walnut from "@/assets/woodtypes/walnut.webp";
-import wenge from "@/assets/woodtypes/wenge.webp";
-import zebrawood from "@/assets/woodtypes/zebrawood.webp";
+import acacia from '@/assets/woodtypes/acacia.webp'
+import alder from '@/assets/woodtypes/alder.webp'
+import ash from '@/assets/woodtypes/ash.webp'
+import bamboo from '@/assets/woodtypes/bamboo.webp'
+import beech from '@/assets/woodtypes/beech.webp'
+import birch from '@/assets/woodtypes/birch.webp'
+import bocote from '@/assets/woodtypes/bocote.webp'
+import bubinga from '@/assets/woodtypes/bubinga.webp'
+import cedar from '@/assets/woodtypes/cedar.webp'
+import cherry from '@/assets/woodtypes/cherry.webp'
+import cocobolo from '@/assets/woodtypes/cocobolo.webp'
+import cypress from '@/assets/woodtypes/cypress.webp'
+import ebony from '@/assets/woodtypes/ebony.webp'
+import fir from '@/assets/woodtypes/fir.webp'
+import goncaloAlves from '@/assets/woodtypes/goncaloalves.webp'
+import granadillo from '@/assets/woodtypes/granadillo.webp'
+import hemlock from '@/assets/woodtypes/hemlock.webp'
+import hickory from '@/assets/woodtypes/hickory.webp'
+import kauri from '@/assets/woodtypes/kauri.webp'
+import larch from '@/assets/woodtypes/larch.webp'
+import lignumVitae from '@/assets/woodtypes/lignumvitae.webp'
+import mahogany from '@/assets/woodtypes/mahogany.webp'
+import mango from '@/assets/woodtypes/mango.webp'
+import maple from '@/assets/woodtypes/maple.webp'
+import merbau from '@/assets/woodtypes/merbau.webp'
+import oak from '@/assets/woodtypes/oak.webp'
+import padauk from '@/assets/woodtypes/padauk.webp'
+import pine from '@/assets/woodtypes/pine.webp'
+import poplar from '@/assets/woodtypes/poplar.webp'
+import purpleheart from '@/assets/woodtypes/purpleheart.webp'
+import redwood from '@/assets/woodtypes/redwood.webp'
+import rosewood from '@/assets/woodtypes/rosewood.webp'
+import sapele from '@/assets/woodtypes/sapele.webp'
+import satinwood from '@/assets/woodtypes/satinwood.webp'
+import spruce from '@/assets/woodtypes/spruce.webp'
+import teak from '@/assets/woodtypes/teak.webp'
+import tulipwood from '@/assets/woodtypes/tulipwood.webp'
+import walnut from '@/assets/woodtypes/walnut.webp'
+import wenge from '@/assets/woodtypes/wenge.webp'
+import zebrawood from '@/assets/woodtypes/zebrawood.webp'
 
 export const projectName = 'HOLZRINGE'
 
@@ -204,246 +204,246 @@ export const galleryPage = {
 }
 
 export const homePage = {
-  woodtypes: {
-    1: {
+  woodtypes: [
+    {
       name: 'acacia',
       link: acacia,
       classes: '',
       color: ''
     },
-    2: {
+    {
       name: 'alder',
       link: alder,
       classes: '',
       color: ''
     },
-    3: {
+    {
       name: 'ash',
       link: ash,
       classes: '',
       color: ''
     },
-    4: {
+    {
       name: 'bamboo',
       link: bamboo,
       classes: '',
       color: ''
     },
-    5: {
+    {
       name: 'beech',
       link: beech,
       classes: '',
       color: ''
     },
-    6: {
+    {
       name: 'birch',
       link: birch,
       classes: '',
       color: ''
     },
-    7: {
+    {
       name: 'bocote',
       link: bocote,
       classes: '',
       color: ''
     },
-    8: {
+    {
       name: 'bubinga',
       link: bubinga,
       classes: '',
       color: ''
     },
-    9: {
+    {
       name: 'cedar',
       link: cedar,
       classes: '',
       color: ''
     },
-    10: {
+    {
       name: 'cherry',
       link: cherry,
       classes: '',
       color: ''
     },
-    11: {
+    {
       name: 'cocobolo',
       link: cocobolo,
       classes: '',
       color: ''
     },
-    12: {
+    {
       name: 'cypress',
       link: cypress,
       classes: '',
       color: ''
     },
-    13: {
+    {
       name: 'ebony',
       link: ebony,
       classes: '',
       color: ''
     },
-    14: {
+    {
       name: 'fir',
       link: fir,
       classes: '',
       color: ''
     },
-    15: {
+    {
       name: 'goncalo alves',
       link: goncaloAlves,
       classes: '',
       color: ''
     },
-    16: {
+    {
       name: 'granadillo',
       link: granadillo,
       classes: '',
       color: ''
     },
-    17: {
+    {
       name: 'hemlock',
       link: hemlock,
       classes: '',
       color: ''
     },
-    18: {
+    {
       name: 'hickory',
       link: hickory,
       classes: '',
       color: ''
     },
-    19: {
+    {
       name: 'kauri',
       link: kauri,
       classes: '',
       color: ''
     },
-    20: {
+    {
       name: 'larch',
       link: larch,
       classes: '',
       color: ''
     },
-    21: {
+    {
       name: 'lignum vitae',
       link: lignumVitae,
       classes: '',
       color: ''
     },
-    22: {
+    {
       name: 'mahogany',
       link: mahogany,
       classes: '',
       color: ''
     },
-    23: {
+    {
       name: 'mango',
       link: mango,
       classes: '',
       color: ''
     },
-    24: {
+    {
       name: 'maple',
       link: maple,
       classes: '',
       color: ''
     },
-    25: {
+    {
       name: 'merbau',
       link: merbau,
       classes: '',
       color: ''
     },
-    26: {
+    {
       name: 'oak',
       link: oak,
       classes: '',
       color: ''
     },
-    27: {
+    {
       name: 'padauk',
       link: padauk,
       classes: '',
       color: ''
     },
-    28: {
+    {
       name: 'pine',
       link: pine,
       classes: '',
       color: ''
     },
-    29: {
+    {
       name: 'poplar',
       link: poplar,
       classes: '',
       color: ''
     },
-    30: {
+    {
       name: 'purpleheart',
       link: purpleheart,
       classes: '',
       color: ''
     },
-    31: {
+    {
       name: 'redwood',
       link: redwood,
       classes: '',
       color: ''
     },
-    32: {
+    {
       name: 'rosewood',
       link: rosewood,
       classes: '',
       color: ''
     },
-    33: {
+    {
       name: 'sapele',
       link: sapele,
       classes: '',
       color: ''
     },
-    34: {
+    {
       name: 'satinwood',
       link: satinwood,
       classes: '',
       color: ''
     },
-    35: {
+    {
       name: 'spruce',
       link: spruce,
       classes: '',
       color: ''
     },
-    36: {
+    {
       name: 'teak',
       link: teak,
       classes: '',
       color: ''
     },
-    37: {
+    {
       name: 'tulipwood',
       link: tulipwood,
       classes: '',
       color: ''
     },
-    38: {
+    {
       name: 'walnut',
       link: walnut,
       classes: '',
       color: ''
     },
-    39: {
+    {
       name: 'wenge',
       link: wenge,
       classes: '',
       color: ''
     },
-    40: {
+    {
       name: 'zebrawood',
       link: zebrawood,
       classes: '',
       color: ''
     }
-  }
+  ]
 }

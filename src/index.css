@@ -54,7 +54,7 @@
 
   /* Universal classes */
   .holz-card {
-    @apply bg-primary-0 dark:bg-primary-1000 border border-gray-900 dark:border-primary-0;
+    @apply bg-primary-0 dark:bg-primary-1000 border border-gray-900 dark:border-primary-0 antialiased;
   }
   .holz-card h1 {
     @apply text-primary-1000 dark:text-primary-0 font-branding;
