@@ -1,6 +1,6 @@
 <template>
     <main
-        class="font-text p-3 mx-auto antialiased w-full max-w-screen-2xl grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-3">
+        class="p-3 mx-auto antialiased w-full max-w-screen-2xl grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-3">
         <div class="holz-card flex flex-col items-center col-span-12 lg:col-span-9 xl:col-span-10 h-full">
             <div class="holz-gallery-controls relative flex flex-row justify-between items-center py-1 px-3 top-0 w-full">
                 <button class="rounded-full h-8 w-8 p-1" @click="imageSliderControls('back')">
