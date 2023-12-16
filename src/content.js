@@ -207,243 +207,165 @@ export const homePage = {
   woodtypes: [
     {
       name: 'акация',
-      link: acacia,
-      classes: '',
-      color: ''
+      link: acacia
     },
     {
       name: 'ольха',
-      link: alder,
-      classes: '',
-      color: ''
+      link: alder
     },
     {
       name: 'ясень',
-      link: ash,
-      classes: '',
-      color: ''
+      link: ash
     },
     {
       name: 'бамбук',
-      link: bamboo,
-      classes: '',
-      color: ''
+      link: bamboo
     },
     {
       name: 'бук',
-      link: beech,
-      classes: '',
-      color: ''
+      link: beech
     },
     {
       name: 'берёза',
-      link: birch,
-      classes: '',
-      color: ''
+      link: birch
     },
     {
       name: 'кордия',
-      link: bocote,
-      classes: '',
-      color: ''
+      link: bocote
     },
     {
       name: 'бубинга',
-      link: bubinga,
-      classes: '',
-      color: ''
+      link: bubinga
     },
     {
       name: 'кедр',
-      link: cedar,
-      classes: '',
-      color: ''
+      link: cedar
     },
     {
       name: 'вишня',
-      link: cherry,
-      classes: '',
-      color: ''
+      link: cherry
     },
     {
       name: 'кокоболо',
-      link: cocobolo,
-      classes: '',
-      color: ''
+      link: cocobolo
     },
     {
       name: 'кипарис',
-      link: cypress,
-      classes: '',
-      color: ''
+      link: cypress
     },
     {
       name: 'эбони',
-      link: ebony,
-      classes: '',
-      color: ''
+      link: ebony
     },
     {
       name: 'пихта',
-      link: fir,
-      classes: '',
-      color: ''
+      link: fir
     },
     {
       name: 'гонсало альвес',
-      link: goncaloAlves,
-      classes: '',
-      color: ''
+      link: goncaloAlves
     },
     {
       name: 'дальбеpгия',
-      link: granadillo,
-      classes: '',
-      color: ''
+      link: granadillo
     },
     {
       name: 'тсуга',
-      link: hemlock,
-      classes: '',
-      color: ''
+      link: hemlock
     },
     {
       name: 'орешник',
-      link: hickory,
-      classes: '',
-      color: ''
+      link: hickory
     },
     {
       name: 'агатис',
-      link: kauri,
-      classes: '',
-      color: ''
+      link: kauri
     },
     {
       name: 'лиственница',
-      link: larch,
-      classes: '',
-      color: ''
+      link: larch
     },
     {
       name: 'бакаут',
-      link: lignumVitae,
-      classes: '',
-      color: ''
+      link: lignumVitae
     },
     {
       name: 'махогани',
-      link: mahogany,
-      classes: '',
-      color: ''
+      link: mahogany
     },
     {
       name: 'манго',
-      link: mango,
-      classes: '',
-      color: ''
+      link: mango
     },
     {
       name: 'клён',
-      link: maple,
-      classes: '',
-      color: ''
+      link: maple
     },
     {
       name: 'мербау',
-      link: merbau,
-      classes: '',
-      color: ''
+      link: merbau
     },
     {
       name: 'дуб',
-      link: oak,
-      classes: '',
-      color: ''
+      link: oak
     },
     {
       name: 'падук',
-      link: padauk,
-      classes: '',
-      color: ''
+      link: padauk
     },
     {
       name: 'сосна',
-      link: pine,
-      classes: '',
-      color: ''
+      link: pine
     },
     {
       name: 'тополь',
-      link: poplar,
-      classes: '',
-      color: ''
+      link: poplar
     },
     {
       name: 'амарант',
-      link: purpleheart,
-      classes: '',
-      color: ''
+      link: purpleheart
     },
     {
       name: 'секвойя',
-      link: redwood,
-      classes: '',
-      color: ''
+      link: redwood
     },
     {
       name: 'палисандр',
-      link: rosewood,
-      classes: '',
-      color: ''
+      link: rosewood
     },
     {
       name: 'сапеле',
-      link: sapele,
-      classes: '',
-      color: ''
+      link: sapele
     },
     {
       name: 'сатиновое дерево',
-      link: satinwood,
-      classes: '',
-      color: ''
+      link: satinwood
     },
     {
       name: 'ель',
-      link: spruce,
-      classes: '',
-      color: ''
+      link: spruce
     },
     {
       name: 'тик',
-      link: teak,
-      classes: '',
-      color: ''
+      link: teak
     },
     {
       name: 'розовое дерево',
-      link: tulipwood,
-      classes: '',
-      color: ''
+      link: tulipwood
     },
     {
       name: 'орех',
-      link: walnut,
-      classes: '',
-      color: ''
+      link: walnut
     },
     {
       name: 'венге',
-      link: wenge,
-      classes: '',
-      color: ''
+      link: wenge
     },
     {
       name: 'зебрано',
-      link: zebrawood,
-      classes: '',
-      color: ''
+      link: zebrawood
     }
-  ]
+  ],
+  subtitle_one: "Дерево красивое и долговечное, но и ему требуется уход.",
+  subtitle_two: "Мы помогаем с этим уже более 4 лет."
 }

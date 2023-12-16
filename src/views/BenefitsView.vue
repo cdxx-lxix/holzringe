@@ -2,7 +2,7 @@
     <main class="m-auto antialiased w-full max-w-screen-2xl p-3 flex flex-col justify-center">
         <div class="w-full flex flex-col items-center holz-card p-4">
             <h1 class="text-4xl md:text-6xl p-2">{{ projectName }}</h1>
-            <hr class="holz-benefits-hr w-1/3 md:w-1/4 mx-auto h-1">
+            <hr class="holz-hr w-1/3 md:w-1/4 mx-auto h-1">
             <h5 class="font-semibold">{{ benefitsPage.subheaderP }}</h5>
         </div>
         

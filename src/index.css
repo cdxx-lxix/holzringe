@@ -65,12 +65,13 @@
   .holz-card p {
     @apply text-gray-700 dark:text-gray-400 font-text;
   }
-
-  /* BenefitsView */
-  .holz-benefits-hr {
+  .holz-hr {
     @apply border border-teal-600 bg-teal-600
     dark:border-amber-500 dark:bg-amber-500;
   }
+
+  /* BenefitsView - No exclusive classes */
+  /* HomeView - No exclusive classes */
 
   /* ContactsView */
   .holz-contacts-form {
@@ -190,12 +191,18 @@
   .flip-card-inner {
     position: relative;
     text-align: center;
-    transition: transform 0.1s;
+    transition: transform 0.7s;
     transition-delay: 3s;
     transform-style: preserve-3d;
   }
 
-  .flip-card:hover .flip-card-inner {
+  /* .flip-card:hover .flip-card-inner {
+    The old class before JS took over this function
+    transform: rotateY(180deg);
+    transition-delay: 0s;
+  } */
+
+  .flip-card-hover .flip-card-inner {
     transform: rotateY(180deg);
     transition-delay: 0s;
   }
