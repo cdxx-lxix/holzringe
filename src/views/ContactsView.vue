@@ -91,6 +91,8 @@ import WhatsappIcon from '../components/icons/WhatsappIcon.vue'
 import PhoneIcon from '../components/icons/PhoneIcon.vue'
 import ViberIcon from '../components/icons/ViberIcon.vue'
 import TelegramIcon from '../components/icons/TelegramIcon.vue'
+/* Form submission works via FormSubmit.co this way you don't even need a mail server or anything of that sort.
+After submission a new tab opens with a thank you message and sometimes captcha. */
 
 // Only these guys are accepted by contact form
 const acceptedFilyTypes = "image/*, .txt, .rtf, .doc, .docx, .xls, .xlsx, .pdf, .ppt, .pttx"

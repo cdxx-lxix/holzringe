@@ -71,7 +71,6 @@
   }
 
   /* BenefitsView - No exclusive classes */
-  /* HomeView - No exclusive classes */
 
   /* ContactsView */
   .holz-contacts-form {
@@ -106,6 +105,15 @@
   .holz-gallery-controls svg {
     @apply dark:fill-primary-1000 fill-primary-0;
   }
+
+   /* HomeView */
+   .holz-wood-type {
+    @apply bg-primary-0/30 text-primary-1000 dark:bg-primary-1000/30 dark:text-primary-0;
+   }
+
+   .holz-svg-fill {
+    @apply fill-primary-1000 dark:fill-primary-0;
+   }
 }
 
 @layer utilities {

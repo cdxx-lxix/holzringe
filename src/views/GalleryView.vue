@@ -44,6 +44,10 @@ import { galleryPage } from '@/content';
 const currentImageIndex = ref(0)
 const isBefore = ref(true)
 const imageSliderControls = (direction) => {
+    /* This looks ugly but it's simple and it works.
+    Basic checks for controls so that when you are 10\10 images the next click forward makes it 1 to start over.
+    When it's 1 and you click back it moves to 10\10.
+    */
     if (direction !== 'back' && (currentImageIndex.value === galleryPage.images.length - 1)) {
         return currentImageIndex.value = 0;
     } else if (direction === 'back' && currentImageIndex.value === 0) {
