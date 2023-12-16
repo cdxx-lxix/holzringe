@@ -12,12 +12,12 @@
     @apply bg-primary-0 dark:bg-primary-1000
         border-b border-gray-900 dark:border-primary-0;
   }
-  .holz-app-nav-toggle {
+  .holz-app-themeswitcher-container {
     /* theme switcher */
-    @apply bg-primary-1000 dark:bg-gray-700
-        peer-checked:after:border-primary-1000 peer-checked:after:bg-slate-700
-        after:bg-teal-400 after:border-primary-0
-        dark:border-gray-600 peer-checked:bg-primary-0;
+    @apply bg-primary-1000 dark:bg-primary-0;
+  }
+  .holz-app-themeswitcher-dot {
+    @apply bg-primary-0 dark:bg-primary-1000;
   }
   .holz-mobile-nav {
     /* the whole mobile menu */

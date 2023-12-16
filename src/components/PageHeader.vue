@@ -3,13 +3,18 @@
         <nav class="holz-app-nav w-full z-20">
             <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <div class="flex items-center space-x-3">
-                    <img :src="headerContent.logolink" class="h-10 hover:animate-spin hover:delay-150  hover:ease-in-out" alt="Holzringe Logo">
+                    <img :src="headerContent.logolink" class="h-10 hover:animate-spin hover:delay-150  hover:ease-in-out"
+                        alt="Holzringe Logo">
                 </div>
                 <div class="flex md:order-2 space-x-3 md:space-x-0">
-                    <label class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" value="" class="sr-only peer" :checked="themeButton" @click="themeSwitcher">
-                        <div
-                            class="holz-app-nav-toggle w-11 h-6 rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:border after:rounded-full after:h-5 after:w-5 after:transition-all">
+                    <label for="toggleTwo" class="flex items-center cursor-pointer select-none text-dark dark:text-white">
+                        <div class="relative">
+                            <input type="checkbox" id="toggleTwo" class="peer sr-only" :checked="themeButton"
+                                @click="themeSwitcher" />
+                            <div class="holz-app-themeswitcher-container block h-8 rounded-full w-14"></div>
+                            <div
+                                class="holz-app-themeswitcher-dot absolute w-6 h-6 transition rounded-full dot left-1 top-1 peer-checked:translate-x-full ">
+                            </div>
                         </div>
                     </label>
                     <button data-collapse-toggle="navbar-sticky" type="button"
@@ -25,11 +30,11 @@
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 font-menu uppercase font-bold"
                     id="navbar-sticky">
-                    <ul
-                        class="holz-app-nav-ul flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0">
+                    <ul class="holz-app-nav-ul flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0">
                         <li v-for="item in headerContent.menu" :key="item.name">
-                            <RouterLink :to="item.link" class="holz-app-nav-button block py-2 px-3 rounded md:p-0" active-class="holz-app-nav-button-arrow">{{
-                                item.name }}</RouterLink>
+                            <RouterLink :to="item.link" class="holz-app-nav-button block py-2 px-3 rounded md:p-0"
+                                active-class="holz-app-nav-button-arrow">{{
+                                    item.name }}</RouterLink>
                         </li>
                     </ul>
                 </div>
@@ -58,10 +63,10 @@ const themeSwitcher = () => {
 
 // Detect and set a theme on load. Add a class to <html> if it's a dark one. 
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-  themeButton.value = false
-  themeSwitcher()
+    themeButton.value = false
+    themeSwitcher()
 } else {
-  themeButton.value = true
-  themeSwitcher()
+    themeButton.value = true
+    themeSwitcher()
 }
 </script>
