@@ -11,12 +11,12 @@
                 </div>
                 <div class="flip-card-back holz-card w-full h-full flex flex-col items-center justify-center"
                     :style='{ backgroundImage: "url(" + wood.link + ")", }'>
-                    <h6 class="holz-wood-type font-semibold w-full py-1 font-text md:text-sm text-xs uppercase">
+                    <h6 class="holz-wood-type font-semibold w-full py-1 font-text md:text-sm text-xs uppercase pointer-events-none">
                         {{ wood.name }}</h6>
                 </div>
             </div>
         </div>
-        <div class="w-full h-96 md:h-full holz-card col-span-4 md:col-span-8 lg:col-span-6 row-span-5 lg:row-span-5 md:col-start-3 lg:col-start-3 row-start-2 lg:row-start-2 flex flex-col items-center justify-center"
+        <div class="w-full h-96 md:h-full holz-card col-span-4 md:col-span-8 lg:col-span-6 row-span-5 lg:row-span-5 md:col-start-3 lg:col-start-3 row-start-2 lg:row-start-2 flex flex-col items-center justify-center cursor-pointer"
             @click="showAll">
             <h1 class="holz-corner-borders dark:holz-corner-borders-light text-4xl md:text-5xl lg:text-6xl p-2">{{
                 projectName }}</h1>

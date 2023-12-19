@@ -17,7 +17,7 @@
     @apply bg-primary-1000 dark:bg-primary-0;
   }
   .holz-app-themeswitcher-dot {
-    @apply bg-primary-0 dark:bg-primary-1000;
+    @apply bg-primary-0 dark:bg-primary-1000 dark:hover:bg-amber-500 hover:bg-teal-600;
   }
   .holz-mobile-nav {
     /* the whole mobile menu */
@@ -131,6 +131,7 @@
   }
   .holz-app-nav-button-arrow {
     position: relative;
+    @apply bg-teal-600/10 dark:bg-amber-600/20;
   }
   .holz-app-nav-button-arrow::before,
   .holz-app-nav-button-arrow::after {
@@ -139,17 +140,17 @@
     left: 0;
     height: 3px;
     width: 100%;
-    @apply dark:bg-slate-700 bg-teal-400;
+    @apply dark:bg-amber-500 bg-teal-600;
   }
   /* upper */
   .holz-app-nav-button-arrow::after {
     top: 0;
-    transform: skewX(-45deg);
+    /* transform: skewX(-45deg); */
   }
   /* lower */
   .holz-app-nav-button-arrow::before {
     bottom: 0;
-    transform: skewX(45deg);
+    /* transform: skewX(45deg); */
   }
   .slide-enter-active,
   .slide-leave-active {
