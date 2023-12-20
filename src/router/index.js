@@ -12,17 +12,22 @@ const router = createRouter({
     {
       path: '/gallery',
       name: 'gallery',
-      component: () => import('@/views/GalleryView.vue')
+      component: () => import(/* webpackChunkName: "Gallery" */ '@/views/GalleryView.vue')
     },
     {
       path: '/benefits',
       name: 'benefits',
-      component: () => import('@/views/BenefitsView.vue')
+      component: () => import(/* webpackChunkName: "Benefits" */ '@/views/BenefitsView.vue')
     },
     {
       path: '/contacts',
       name: 'contacts',
-      component: () => import('@/views/ContactsView.vue')
+      component: () => import(/* webpackChunkName: "Contacts" */ '@/views/ContactsView.vue')
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: '404',
+      component: () => import(/* webpackChunkName: "404" */ '@/views/NotFound.vue')
     }
   ]
 })
