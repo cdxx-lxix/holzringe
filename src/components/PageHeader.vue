@@ -27,7 +27,7 @@
                     id="navbar-sticky">
                     <ul class="holz-app-nav-ul flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:flex-row md:mt-0">
                         <li v-for="item in headerContent.menu" :key="item.name">
-                            <RouterLink :to="item.link" class="holz-app-nav-button block py-2 px-3 rounded md:p-0"
+                            <RouterLink :to="item.link" class="holz-app-nav-button block rounded p-0"
                                 active-class="holz-app-nav-button-arrow">{{
                                     item.name }}</RouterLink>
                         </li>
@@ -35,10 +35,10 @@
                 </div>
             </div>
         </nav>
-        <div v-if="mobileMenu" class="holz-app-nav md:hidden flex flex-wrap items-center justify-center mx-auto px-3">
-            <ul class="holz-app-nav-ul flex flex-row md:p-0 font-medium">
+        <div v-if="mobileMenu" class="holz-app-nav md:hidden flex flex-wrap items-center justify-center mx-auto px-3 font-menu uppercase">
+            <ul class="holz-app-nav-ul flex flex-row font-medium">
                 <li v-for="item in headerContent.menu" :key="item.name">
-                    <RouterLink :to="item.link" class="holz-app-nav-button block py-2 px-3 rounded"
+                    <RouterLink :to="item.link" class="holz-app-nav-button block py-4 px-3 rounded"
                         active-class="holz-app-nav-button-arrow" @click="mobileMenu = false">{{
                             item.name }}</RouterLink>
                 </li>

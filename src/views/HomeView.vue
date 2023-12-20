@@ -1,6 +1,6 @@
 <template>
     <main
-        class="p-3 mx-auto antialiased w-full max-w-screen-2xl grid grid-cols-4 md:grid-cols-12 lg:grid-cols-10 gap-3 justify-center items-center">
+        class="p-3 mx-auto antialiased w-full max-w-screen-2xl grid grid-cols-4 md:grid-cols-12 lg:grid-cols-10 gap-3 justify-center items-center overflow-hidden">
         <div class="flip-card col-span-1 md:col-span-2 xl:col-span-1" v-for="wood, index in homePage.woodtypes" :key="index"
             @mouseover="hover = index" @mouseleave="hover = ''"
             :class="[{ 'flip-card-hover': hover === index || chosenTile === index }, { 'flip-card-hover': isAllFlipped }]">
@@ -20,7 +20,7 @@
             @click="showAll">
             <h1 class="holz-corner-borders dark:holz-corner-borders-light text-5xl md:text-6xl lg:text-7xl xl:text-8xl p-2 mb-2">{{
                 projectName }}</h1>
-            <hr class="holz-hr w-1/5 md:w-1/4 mx-auto h-1 mb-2">
+            <hr class="holz-hr w-1/3 md:w-1/4 mx-auto h-1 mb-2">
             <p class="md:text-sm text-xs">{{ homePage.subtitle_one }}</p>
             <p class="md:text-sm text-xs">{{ homePage.subtitle_two }}</p>
         </div>
