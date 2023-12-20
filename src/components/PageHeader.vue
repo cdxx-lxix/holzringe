@@ -3,11 +3,11 @@
         <nav class="holz-app-nav w-full z-20">
             <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-3 md:px-4 py-2">
                 <div class="flex items-center space-x-3">
-                    <img :src="headerContent.logolink" class="h-10 hover:animate-spin hover:delay-150  hover:ease-in-out"
+                    <img :src="headerContent.logolink" class="h-10 w-10 hover:animate-spin hover:delay-150  hover:ease-in-out"
                         alt="Holzringe Logo">
                 </div>
                 <div class="flex md:order-2 space-x-3 md:space-x-0">
-                    <label for="toggleTwo" class="flex items-center cursor-pointer select-none ">
+                    <label for="toggleTwo" class="flex items-center cursor-pointer select-none" aria-label="Поменять тему">
                         <div class="relative">
                             <input type="checkbox" id="toggleTwo" class="peer sr-only" :checked="themeButton"
                                 @click="themeSwitcher" />

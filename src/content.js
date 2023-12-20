@@ -1,4 +1,4 @@
-import logo from '@/assets/images/holzringe_transparent_512_cutbw.png'
+import logo from '@/assets/images/holzringe_transparent_512_cutbw.webp'
 import acacia from '@/assets/woodtypes/acacia.webp'
 import alder from '@/assets/woodtypes/alder.webp'
 import ash from '@/assets/woodtypes/ash.webp'

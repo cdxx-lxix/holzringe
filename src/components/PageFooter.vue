@@ -8,19 +8,19 @@
             </p>
             <div class="flex justify-center items-center space-x-1">
                 <a :href="contactOptions.phone"
-                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer" aria-label="Позвонить по телефону">
                     <PhoneIcon class="w-4 h-4" color="#f97316" />
                 </a>
                 <a :href="contactOptions.whatsapp"
-                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer" aria-label="Связаться в Whatsapp">
                     <WhatsappIcon class="w-4 h-4" color="#25d366" />
                 </a>
                 <a :href="contactOptions.viber"
-                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer" aria-label="Связаться в Viber">
                     <ViberIcon class="w-4 h-4" color="#7d3daf" />
                 </a>
                 <a :href="contactOptions.telegram"
-                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer">
+                    class="holz-app-footer-icon-link inline-flex justify-center p-2 rounded-lg cursor-pointer" aria-label="Связаться в Telegram">
                     <TelegramIcon class="w-4 h-4" color="#ffffff" />
                 </a>
             </div>
