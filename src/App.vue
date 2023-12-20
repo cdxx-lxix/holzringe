@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 import PageHeader from './components/PageHeader.vue';
 import PageFooter from './components/PageFooter.vue';
 import { RouterView } from 'vue-router'
