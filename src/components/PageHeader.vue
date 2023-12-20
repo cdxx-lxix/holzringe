@@ -20,7 +20,7 @@
                     <button type="button" @click="mobileMenuToggle"
                         class="holz-mobile-nav inline-flex p-1 w-10 h-10 text-sm rounded-full md:hidden bg-primary-1000 dark:bg-primary-0 hover:bg-teal-600 hover:dark:bg-amber-500">
                         <span class="sr-only">{{ headerContent.srmenutip }}</span>
-                        <MenuIcon class="dark:fill-primary-1000 fill-primary-0" />
+                        <MenuIcon class="dark:fill-primary-1000 fill-primary-0 w-8 h-8" />
                     </button>
                 </div>
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 font-menu uppercase font-bold"
@@ -52,6 +52,8 @@ import { RouterLink } from 'vue-router'
 import { headerContent } from '@/content'
 import { ref } from 'vue';
 import MenuIcon from '@/components/icons/MenuIcon.vue'
+
+// TODO: Fix fonts imports
 
 const mobileMenu = ref(false)
 const mobileMenuToggle = () => {
