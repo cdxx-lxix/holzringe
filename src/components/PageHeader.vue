@@ -53,8 +53,6 @@ import { headerContent } from '@/content'
 import { ref } from 'vue';
 import MenuIcon from '@/components/icons/MenuIcon.vue'
 
-// TODO: Fix fonts imports
-
 const mobileMenu = ref(false)
 const mobileMenuToggle = () => {
     return mobileMenu.value = !mobileMenu.value

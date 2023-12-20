@@ -5,9 +5,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        menu: [ 'Oswald', 'sans-serif' ],
-        branding: ['Horizon', 'sans-serif'],
-        text: ['Roboto', 'sans-serif']
+        menu: [ 'Oswald' ],
+        branding: ['Archivo Black'],
+        text: ['Roboto']
       },
       colors: {
         primary: {

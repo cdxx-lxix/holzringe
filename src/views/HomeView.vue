@@ -18,7 +18,7 @@
         </div>
         <div class="w-full h-96 md:h-full holz-card col-span-4 md:col-span-8 lg:col-span-6 row-span-5 lg:row-span-5 md:col-start-3 lg:col-start-3 row-start-2 lg:row-start-2 flex flex-col items-center justify-center cursor-pointer"
             @click="showAll">
-            <h1 class="holz-corner-borders dark:holz-corner-borders-light text-4xl md:text-5xl lg:text-6xl p-2 mb-2">{{
+            <h1 class="holz-corner-borders dark:holz-corner-borders-light text-5xl md:text-6xl lg:text-7xl xl:text-8xl p-2 mb-2">{{
                 projectName }}</h1>
             <hr class="holz-hr w-1/5 md:w-1/4 mx-auto h-1 mb-2">
             <p class="md:text-sm text-xs">{{ homePage.subtitle_one }}</p>
